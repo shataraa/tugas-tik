@@ -44,15 +44,28 @@ body {
   top: 0;
   left: 0;
   z-index: 9999;
+  transition: all .2s ease; 
   font-family: 'montserrat', sans-serif, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }
 
-.navbar-brand {
+.navbar:hover{
+  transition: all .2s ease;
+  transform: scale(1.01);
+}
+
+
+.navbar-brand{
   font-family: 'Grav', sans-serif;
   font-size: 1.5rem;
+  transition: all .3s ease;
   margin-left: 15px;
   color: #000000;
+}
+
+.navbar .navbar-brand:hover{
+  transform: scale(1.4,1.5);
+  transition: all .3s ease;
 }
 
 .navbar .nav-link,
@@ -72,12 +85,19 @@ body {
 
 .container {
   position: relative;
-  margin-top: 100px;
-  background-color: hsla(0, 0%, 100%, 0.137);
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  background-color: hsla(0, 0%, 100%, 0);
   border: 1px solid rgba(255, 255, 255, 0.349);
   border-radius: 5rem;
   box-shadow: inset 0px 0px 10px 1px hsla(0, 0%, 100%, 0.192);
+    transition: all .2s ease;
   backdrop-filter: blur(5px);
+}
+
+.container:hover{
+  transition: all .2s ease;
+  transform: scale(1.01);
 }
 
 .wisata {
@@ -129,6 +149,7 @@ body {
   border-radius: 2rem;
   transition: 0.5s ease;
   padding: .1rem .1rem;
+  color: #fff;
   
 }
 
@@ -141,33 +162,33 @@ body {
   padding: .75rem .75rem;
 }
 
-
-
-.dropdown-menu.show{
-opacity: 1;
-transform: translateY(0) scale(1);
-pointer-events: auto;
-visibility: visible !important;
-}
-
 .nav-item.dropdown {
   position: relative;
 }
 
-.dropdown-menu {
-    background-color: #ffffff11 !important;
+.navbar .dropdown-menu.show{
+opacity: 1;
+transform: translateY(0) scale(1);
+pointer-events: auto;
+transition: transform 0.35s ease, opacity .5s ease;
+width: 10px !important;
+overflow: hidden;
+visibility: visible !important;
+}
 
+.dropdown-menu {
+  background-color: #ffffff11 !important;
   min-width: 220px;
-  padding: 1px;
   font-family: montserrat, sans-serif;
   border: 1px solid hsla(0, 0%, 100%, 0.205) !important;
   box-shadow: inset 0px 0px 10px 1px hsla(0, 0%, 100%, 0.192);
   backdrop-filter: blur(2px);
   border-radius: 2rem !important;
-  transition: opacity 0.25s ease;
-  margin-top: 10px !important;
-  opacity: 0; transform: translateY(-15px) scale(0.95);
-  transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+.navbar .dropdown-menu {
+  opacity: 0; transform: translateY(-100px) scale(0.1,1);
+  transition: transform 0.35s ease, opacity 0.2s ease;
   pointer-events: none;
   visibility: hidden !important;
   position: absolute !important;
@@ -175,10 +196,9 @@ visibility: visible !important;
   right: 0;
   left: auto !important;
   display: block;
-  min-width: 220px;
-  padding: 15px;
   margin-top: 12px !important;
   border-radius: 2rem !important;
+  overflow: hidden;
 }
 
 .dropdown-menu .dropdown-item {
@@ -202,7 +222,8 @@ visibility: visible !important;
 }
 .dropdown-menu a{
   display: block;
-  width: 80%;
+  margin-top: 5px;
+  width: 100%;
   margin: 0;
   padding: 10px 20px;
   margin-left: 0;
@@ -213,35 +234,20 @@ visibility: visible !important;
 
 .dropdown-menu a:hover{
   margin-left: 10px;
+  margin-top: 3px;
   width: 85%;
   border: 1px solid hsla(0, 0%, 100%, 0.219);
   border-radius: 10rem;
-  box-shadow: inset 0px 0px 10px 10px hsla(0, 0%, 100%, 0.192);
+  box-shadow: inset 3px 3px 10px 10px hsla(0, 0%, 100%, 0.192);
   transition: all 0.3s ease;
   color: rgb(255, 255, 255);
   background-color: transparent !important;
 }
 
-.dropdown-menu a:hover::after{
-  margin-left: 10px;
-  width: 20%;
-  border-radius: 10rem;
-  content: '';
-  transition: all 0.9s ease;
-  color: rgba(255, 255, 255, 0.76);
-}
-
-.dropdown-menu a::after{
-  margin-left: 10px;
-  width: 20%;
-  border-radius: 10rem;
-  transition: all 0.3s ease;
-}
-
-.dropdown-item.active,
-.dropdown-item:active {
+.navbar .dropdown-item.active,
+.navbar .dropdown-item:active {
   background-color: transparent !important;
-  color: rgba(255, 255, 255, 0.329) !important;}
+  color: rgb(255, 255, 255) !important;}
 
 .site-title {
   font-family: 'Trunk', cursive;
@@ -288,6 +294,37 @@ h2 {
 
 }
 
+.kembali{
+  position: relative;
+  display: inline-flex;
+  font-family: 'montserrat', sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  padding: 0.25rem 1rem;
+  border: 1px solid hsl(0, 0%, 100%, 0.3);
+  border-radius: 2rem;
+  background-color: #ffffff05;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 0.5s ease;
+  transition: background-color 0.2s, transform 0.2s ease;
+  backdrop-filter: blur(2px);
+  box-shadow: inset 0 0 8px 1px hsla(0, 0%, 100%, 0.26);
+  transform: translateY(-5px) scale(1);
+
+}
+
+.kembali:hover {
+  background-color: #ffffff2a;
+  color: #fff;
+  text-decoration: none;
+  transform: translateY(0) scale(1.4);
+  transition: all 0.3s ease;
+}
+
 .learnmore::after {
   content: '';
   position: absolute;
@@ -310,32 +347,54 @@ h2 {
 }
 
 .learnmore:hover {
-  transform: scale(1.3);
+  transform: scale(1.5);
   background-color: rgba(255, 255, 255, 0.096);
   transition: all 0.2s ease;
   backdrop-filter: blur(10px);
 }
 
 .info-box {
-  background-color: #fff;
-  color: #000;
-  min-height: 400vh;
+  background-color: #ffffff00;
+  margin-top: 50vh;
+  width: 98% !important;
+  border: 1px solid rgba(255, 255, 255, 0.349);
+  box-shadow: inset 0px 0px 10px 10px hsla(0, 0%, 100%, 0.192);
+  backdrop-filter: blur(5px);
+  border-radius: 10rem;
+  padding-left: 100px !important;
+  color: #ffffff;
+  min-height: 200vh;
+}
+
+.info{
+  font-family: 'montserrat', sans-serif, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-top: 50px ;
+  padding-right: 100px;
+}
+
+.info h3{
+  font-family: 'grav', sans-serif, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 2rem;
+  padding-bottom: 10px;
+}
+.info a{
+  transform: scale(1);
+}
+.info a:hover{
+  transform: scale(1.1);
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 700px) {
   nav{
     width: 10px;
   }
   .nav-item {
     margin-right: 10px !important;
     margin-top: 25px;
-  }
-  .container{
-    margin-top: 50px;
   }
 
   .navbar-brand {
@@ -345,8 +404,7 @@ html {
 }
 .dropdown-menu {
   background-color: #ffffff11 !important;
-  min-width: 220px;
-  padding: 15px;
+  min-width: 100% !important;
   font-family: montserrat, sans-serif;
   border: 1px solid hsla(0, 0%, 100%, 0.205) !important;
   box-shadow: inset 0px 0px 10px 1px hsla(0, 0%, 100%, 0.192);
@@ -354,16 +412,22 @@ html {
   border-radius: 2rem !important;
   margin-top: 20px !important;
   position: relative;
-  width: 101.5%;
   margin-left: 0px !important;
 
 }
 
+.dropdown-menu .show{
+  min-width: 100% !important;
+}
+
 .dropdown-menu a{
-  margin-left: 0px;
   width: 85%;
   transition: all 0.3s ease;
   color: rgb(255, 255, 255);
+}
+
+.info-box{
+  border-radius: 5rem;
 }
 
 .dropdown-menu a:hover{
@@ -383,7 +447,41 @@ html {
 }
 
 .container{
-    margin-top: 100px;
+    margin-top: 5vh;
+    padding:30px !important;
+    width: 95% !important;
+}
+
+.info-box h3{
+  font-size: 1.5rem;
+  padding-bottom: 0px;
+}
+
+.info{
+  font-size: 1rem;
+  font-family: 'montserrat', sans-serif, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-top: 50px ;
+  padding-right: 100px;
+}
+
+.info p{
+  font-size: 15px;
+  font-family: 'montserrat', sans-serif, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-top: 50px ;
+}
+
+.container h1{
+  padding-bottom: 100px;
+  font-size: 5rem;
+}
+
+.container h2{
+  font-size: 1rem !important;
+}
+
+.kembali{
+  display: none;
+
 }
 
 }
