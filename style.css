@@ -32,10 +32,10 @@ body {
 }
 
 @font-face {
-  font-family: '';
+  font-family: 'Sif';
   src: local('Trunk'),
-  url('ttf/PastelTrunk-Regular.ttf') format('truetype'),
-  url('ttf/PastelTrunk-Regular.otf') format('opentype');
+  url('ttf/sif.ttf') format('truetype'),
+  url('ttf/sif.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -260,7 +260,8 @@ visibility: visible !important;
   color: rgb(255, 255, 255) !important;}
 
 .site-title {
-  font-family: 'Trunk', cursive;
+  font-family: 'sif', cursive;
+  margin-bottom: 50px;
   font-size: 5.5rem;
   line-height: 1.1;
   color: #ffffff;
@@ -453,13 +454,18 @@ html {
   margin-top: 20vh;
   display: flex;
   aspect-ratio: 16 / 9;
-  gap: 20px;
+  gap: 0px;
 
 }
 
 .info-text{
-  transform: scale(5);
+  position: relative;
+  transform: scale(5) translateX(10px);
   font-family: 'Trunk', cursive;
+}
+
+.info-text2{
+  transform: scale(2) translateX(100px);
 }
 
 .img-box img {
