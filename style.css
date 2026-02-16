@@ -372,6 +372,25 @@ h2 {
   padding-right: 100px;
 }
 
+.content-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.content-info p {
+  font-size: 1rem;
+  flex: 2;
+  padding-right: 1000px;
+}
+
+.content-info img {
+  flex: 1;
+  max-width: 350px;
+  height: auto;
+  border-radius: 1rem;
+}
+
 .info h3{
   font-family: 'grav', sans-serif, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 2rem;
