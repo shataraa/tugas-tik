@@ -31,6 +31,16 @@ body {
   font-display: swap;
 }
 
+@font-face {
+  font-family: '';
+  src: local('Trunk'),
+  url('ttf/PastelTrunk-Regular.ttf') format('truetype'),
+  url('ttf/PastelTrunk-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 .navbar{
   position: fixed;
   background-color: #ffffff0a;
@@ -430,6 +440,50 @@ h2 {
 
 html {
   scroll-behavior: smooth;
+}
+
+.img-box{
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-box img{
+  margin-top: 20vh;
+  display: flex;
+  aspect-ratio: 16 / 9;
+  gap: 20px;
+
+}
+
+.info-text{
+  transform: scale(5);
+  font-family: 'Trunk', cursive;
+}
+
+.img-box img {
+  width: 700px;
+  height: auto;
+  object-fit: cover;
+  transition: all .3s ease;
+  border-radius: 7rem;
+}
+
+.foto{
+  transform: translateY(700px);
+}
+
+.foto:hover{
+  transform: translateY(725px) scale(1.1);
+}
+
+.foto2:hover{
+  transform: scale(1.1);
+}
+
+.img-box img:hover {
+  border: 2px solid white;
 }
 
 @media (max-width: 700px) {
