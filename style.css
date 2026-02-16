@@ -379,28 +379,53 @@ h2 {
 }
 
 .content-info p {
-  font-size: 1rem;
+  font-family: "Urbanist", sans-serif;
+  padding-top: 100px;
+  text-align: justify;
+  font-size: 1.5rem;
   flex: 2;
-  padding-right: 1000px;
+  padding-right: 100px;
 }
 
 .content-info img {
+  margin-top: 100px;
+  box-shadow: 0 0 10px 10px hsla(0, 0%, 0%, 0.486);
   flex: 1;
   max-width: 350px;
   height: auto;
-  border-radius: 1rem;
+  border-radius: 5rem;
+}
+
+.content-info img {
+  transition: all .2s ease;
+  margin-top: 100px;
+  flex: 1;
+  max-width: 350px;
+  height: auto;
+  border-radius: 4rem;
+}
+
+
+.content-info img:hover {
+  background-color: #000;
+  transform: scale(1.2)
+  translateX(-10px)
+  translateY(50px);
+  transition: all .2s ease;
+  margin-top: 100px;
+  box-shadow: 0 0 10px 10px hsla(0, 0%, 100%, 0.178);
+  flex: 1;
+  border: 2px solid rgb(255, 255, 255);
+  max-width: 350px;
+  height: auto;
+  border-radius: 0rem;
+  cursor: pointer;
 }
 
 .info h3{
   font-family: 'grav', sans-serif, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 2rem;
   padding-bottom: 10px;
-}
-.info a{
-  transform: scale(1);
-}
-.info a:hover{
-  transform: scale(1.1);
 }
 
 html {
@@ -446,6 +471,7 @@ html {
 }
 
 .info-box{
+  overflow: hidden;
   border-radius: 5rem;
 }
 
