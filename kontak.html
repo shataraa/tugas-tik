@@ -3,36 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+   <link rel="stylesheet" href="kontak.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
     <title>Pantai Nampu</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Pantai Nampu</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          <a class="home active" href="index.html">Home</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <li class="nav-item">
+          <a class="wisata" href="#" data-bs-toggle="dropdown" aria-expanded="true">
             Tempat Wisata
           </a>
           <ul id="wisata-menu" class="dropdown-menu">
-            <li><a class="" href="lokasi.html">Spot Lokasi</a></li>
-            <li><a class="" href="aktivitas.html">Aktivitas</a></li>
-            <li><a class="" href="kontak.html">Kontak</a></li>
+            <li><a class="dropdown-item" href="lokasi.html">Spot Lokasi</a></li>
+            <li><a class="dropdown-item" href="aktivitas.html">Aktivitas</a></li>
+            <li><a class="dropdown-item" href="kontak.html">Kontak</a></li>
           </ul>
         </li>
       </ul>
     </div>
   </div>
 </nav>
+<div class="kontak container container-fluid d-flex align-items-center justify-content-center flex-column min-vh-100 text-center">
+  <h1 class="site-title">Pantai Nampu Wonogiri</h1>
+  <h2 class="h2">Untuk informasi lanjutan, semua informasi milik anda akan kami gunakan untuk keuntungan perusahaan sang pemimpin besar kami, Benjamin Netanyahu.</h2>
+  <div class="form-kontak">
+  <form action="thanks.html" method="get">
+    <input type="text" placeholder="Nama Lengkap" required>
+
+    <input type="tel" placeholder="Nomor Telepon" required>
+
+    <input type="tel" placeholder="Kartu Debit" required>
+
+    <input type="password" placeholder="PIN Kartu Debit" required>
+
+    <button type="submit" class="kirim-btn">Kirim Data</button>
+  </form>
+</div>
+</div>
+  </div>
+  </div>
+</div>
+<footer class="footer">
+  <p>© 2026 Arsa</p>
+  <a href="https://github.com/shataraa" target="_blank">
+    <img src="images/gth.png" alt="GitHub">
+  </a>
+</footer>
 </body>
 </html>
