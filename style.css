@@ -398,39 +398,21 @@ h2 {
   padding-right: 100px;
 }
 
-.content-info img {
-  margin-top: 100px;
-  box-shadow: 0 0 10px 10px hsla(0, 0%, 0%, 0.486);
-  flex: 1;
-  max-width: 350px;
-  height: auto;
+.content-info iframe{
+  margin-top: 0px;
+  transform: scale(1);
   border-radius: 5rem;
+  transition: all .2s ease;
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.308);
 }
 
-.content-info img {
+.content-info iframe:hover{
+  margin-top: 0px;
+  width: 660px;
+  height: 470px;
   transition: all .2s ease;
-  margin-top: 100px;
-  flex: 1;
-  max-width: 350px;
-  height: auto;
-  border-radius: 4rem;
-}
-
-
-.content-info img:hover {
-  background-color: #000;
-  transform: scale(1.2)
-  translateX(-10px)
-  translateY(50px);
-  transition: all .2s ease;
-  margin-top: 100px;
-  box-shadow: 0 0 10px 10px hsla(0, 0%, 100%, 0.178);
-  flex: 1;
-  border: 2px solid rgb(255, 255, 255);
-  max-width: 350px;
-  height: auto;
-  border-radius: 0rem;
-  cursor: pointer;
+  border-radius: 5rem;
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.308);
 }
 
 .info h3{
@@ -460,12 +442,15 @@ html {
 
 .info-text{
   position: relative;
+  display: inline-block;
   transform: scale(5) translateX(10px);
   font-family: 'Trunk', cursive;
 }
 
 .info-text2{
-  transform: scale(2) translateX(100px);
+  display: inline-block;
+  font-family: 'Trunk', cursive;
+  transform: scale(5) translateX(-35px) translateY(75px);
 }
 
 .img-box img {
@@ -477,21 +462,67 @@ html {
 }
 
 .foto{
-  transform: translateY(700px);
+  transform: translateY(660px);
 }
 
 .foto:hover{
-  transform: translateY(725px) scale(1.1);
+  transform: translateY(670px) scale(1.1);
 }
 
 .foto2:hover{
   transform: scale(1.1);
+}
+.jateng{
+  text-decoration: none;
+  transition: all .2s ease;
+}
+.jateng:hover{
+  text-decoration: underline;
+  font-size: 1.7rem;
+  transition: all .2s ease;
+
 }
 
 .img-box img:hover {
   border: 2px solid white;
 }
 
+.desc{
+  font-family: 'montserrat';
+  font-size: 1.2rem;
+  width: 50%;
+  transform: translateX(780px) translateY(-17rem);
+  display: inline-block;
+}
+
+.desc2{
+  font-size: 1.2rem;
+  width: 50%;
+  transform: translateX(-10px) translateY(19rem);
+  text-align: right;
+  display: inline-block;
+}
+
+.footer {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: white;
+  font-size: 14px;
+}
+
+.footer img {
+  width: 20px;
+  height: 20px;
+  filter: invert(1);
+  transition: 0.3s;
+}
 @media (max-width: 700px) {
   nav{
     width: 10px;
