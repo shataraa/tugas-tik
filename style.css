@@ -503,12 +503,11 @@ html {
   display: inline-block;
 }
 
-.footer {
+.footer{
   position: fixed;
-  bottom: 20px;
+  bottom: 0px;
   left: 50%;
   transform: translateX(-50%);
-
   display: flex;
   align-items: center;
   gap: 10px;
@@ -522,6 +521,11 @@ html {
   height: 20px;
   filter: invert(1);
   transition: 0.3s;
+  vertical-align: 10px;
+}
+
+.footer img:hover {
+  transform: scale(1.5);
 }
 @media (max-width: 700px) {
   nav{
