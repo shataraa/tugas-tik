@@ -1,11 +1,11 @@
 .spot-carousel{
-  margin-top: 10vh;
+  margin-top: 5vh;
   width: 85%;
   margin-left: auto;
-  margin-right: auto;
   border-radius: 5rem;
+  margin-right: auto;
   overflow: hidden;
-  box-shadow: inset 0px 0px 10px 3px hsla(0,0%,100%,0.2);
+  box-shadow: 0px 0px 10px 3px hsla(0, 0%, 0%, 0.664);
 }
 
 .spot-carousel img{
@@ -14,15 +14,12 @@
   transition: 0.4s ease;
 }
 
-.spot-carousel img:hover{
-  transform: scale(1.05);
-}
-
 .carousel-caption{
-  backdrop-filter: blur(10px);
-  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(4px);
+  box-shadow: inset 0 0 10px 4px hsla(0, 0%, 100%, 0.205);
+  background: rgba(0, 0, 0, 0.192);
   border-radius: 2rem;
-  padding: 20px;
+  padding: 20px 30px !important;
 }
 
 .carousel-caption h5{
@@ -36,7 +33,73 @@
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon{
-  filter: invert(1);
+  transition: all .2s ease;
+}
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover{
+  transform: scale(1.5);
+  cursor: default;
+}
+
+.carousel-indicators button{
+  padding-top: 5px !important;
+  width: 10px !important;
+  background-color: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.116) !important;
+  box-shadow: inset 0 0 10px 4px hsla(0, 0%, 100%, 0.205);
+  border-radius: 10rem !important;
+  transform: translateY(-20px) !important;
+  transition: all .5s ease !important;
+  cursor: default;
+}
+
+.carousel-indicators button:hover{
+  padding-top: 5px !important;
+  width: 20px !important;
+  background-color: rgba(255, 255, 255, 0.212) !important;
+  border: 1px solid rgba(255, 255, 255, 0.596) !important;
+  box-shadow: inset 0 0 10px 4px hsla(0, 0%, 100%, 0.267);
+  border-radius: 10rem !important;
+  transform: translateY(-20px);
+  cursor: default;
+}
+
+.carousel-control-prev:focus,
+.carousel-control-next:focus,
+.carousel-control-prev:active,
+.carousel-control-next:active {
+  outline: none;
+  box-shadow: none;
+  cursor: default;
+}
+
+.carousel-indicators button:focus{
+  outline: none;
+  box-shadow: none;
+  cursor: default;
+}
+
+.carousel-control-prev:focus:not(:focus-visible),
+.carousel-control-next:focus:not(:focus-visible){
+  outline: none;
+  box-shadow: none;
+  cursor: default;
+}
+
+.carousel-indicators .active{
+  background-color: rgba(255, 255, 255, 0.589) !important;
+  padding-top: 5px !important;
+  width: 30px !important;
+  transition: all .5s ease;
+  cursor: default;
+}
+
+.carousel-indicators .active:hover{
+  background-color: rgba(255, 255, 255, 0.589) !important;
+  padding-top: 5px !important;
+  width: 30px !important;
+  transition: all .5s ease;
+  cursor: default;
 }
 
 * {
@@ -431,8 +494,8 @@ visibility: visible !important;
 }
 
 .content-info p {
-  font-family: "Urbanist", sans-serif;
-  padding-top: 100px;
+  font-family: 'Urbanist', sans-serif;
+  padding-top: 10px;
   text-align: justify;
   font-size: 1.5rem;
   flex: 2;
@@ -546,14 +609,13 @@ html {
 }
 
 .footer{
-  position: fixed;
+  position: fixed !important;
   bottom: 0px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   align-items: center;
   gap: 10px;
-
   color: white;
   font-size: 14px;
 }
