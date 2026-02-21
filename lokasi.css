@@ -24,11 +24,13 @@
 
 .carousel-caption h5{
   font-family: 'Grav';
+  cursor: default;
   font-size: 2rem;
 }
 
 .carousel-caption p{
   font-family: 'Montserrat';
+  cursor: default;
 }
 
 .carousel-control-prev-icon,
@@ -102,6 +104,52 @@
   cursor: default;
 }
 
+.spot-highlight{
+  display:flex;
+  gap:30px;
+  cursor: default;
+  margin-top:40px;
+  flex-wrap:wrap;
+}
+
+.highlight-card{
+  flex:1;
+  min-width:250px;
+  padding:25px;
+  border-radius:2rem;
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(6px);
+  border:1px solid rgba(255,255,255,0.25);
+  box-shadow: inset 0 0 10px rgba(255,255,255,0.15);
+  transition:.3s ease;
+}
+
+.highlight-card:hover{
+  transform:translateY(-8px) scale(1.02);
+}
+
+.highlight-card h4{
+  font-family:'Grav';
+  color:white;
+  transition: all .2s ease;
+}
+
+.highlight-card h4:hover{
+  font-family:'Grav';
+  transform: scale(1.1) translateX(14px);
+  color:white;
+}
+
+
+.highlight-card p{
+  font-family:'Urbanist';
+  color:rgba(255,255,255,0.85);
+}
+
+.spot-carousel{
+  position: relative;
+}
+
 * {
   box-sizing: border-box;
   margin:   0;
@@ -111,10 +159,9 @@
 body {
   min-height: 100vh;
   background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('images/bg.jpg') center top / cover no-repeat fixed;
-  background-color: #000; /* fallback while image loads */
+  background-color: #000;
 }
 
-/* Load Grav font (place grav.ttf in ttf/grav.ttf relative to project root) */
 @font-face {
   font-family: 'Grav';
   src: local('Grav'),
@@ -484,11 +531,13 @@ visibility: visible !important;
 .info{
   font-family: 'montserrat', sans-serif, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding-top: 50px ;
+  cursor: default;
   padding-right: 100px;
 }
 
 .content-info {
   display: flex;
+  cursor: default;
   align-items: flex-start;
   gap: 40px;
 }

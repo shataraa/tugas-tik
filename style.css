@@ -387,6 +387,7 @@ visibility: visible !important;
   display: flex;
   align-items: flex-start;
   gap: 40px;
+  
 }
 
 .content-info p {
@@ -528,6 +529,7 @@ html {
 .footer img:hover {
   transform: scale(1.5);
 }
+
 @media (max-width: 700px) {
   nav{
     width: 10px;
@@ -542,6 +544,8 @@ html {
   color: #000000;
   margin-left: 10px;
 }
+
+
 .dropdown-menu {
   background-color: #ffffff11 !important;
   min-width: 100% !important;
