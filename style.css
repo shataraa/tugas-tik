@@ -501,7 +501,7 @@ html {
   font-family: 'montserrat';
   font-size: 1.2rem;
   width: 50%;
-  transform: translateX(-10px) translateY(19rem);
+  transform: translateX(-10px) translateY(15rem);
   text-align: right;
   display: inline-block;
 }
