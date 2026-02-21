@@ -6,11 +6,11 @@
 
 body {
   min-height: 100vh;
+  padding-top: 60px;
   background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('images/bg.jpg') center top / cover no-repeat fixed;
-  background-color: #000; /* fallback while image loads */
+  background-color: #000;
 }
 
-/* Load Grav font (place grav.ttf in ttf/grav.ttf relative to project root) */
 @font-face {
   font-family: 'Grav';
   src: local('Grav'),
@@ -42,13 +42,12 @@ body {
 }
 
 .navbar{
-  position: fixed;
+  position: fixed !important;
   background-color: #ffffff0a;
   margin-top: 10px;
   margin-left: 2.5%;
   margin-right: 2.5%;
   width: 95%;
-  backdrop-filter: blur(5px);
   box-shadow: inset 0px 0px 10px 1px hsla(0, 0%, 100%, 0.192);
   border-radius: 2.3rem;
   top: 0;
